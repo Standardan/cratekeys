@@ -1,0 +1,35 @@
+# CrateKeys configuration.
+# Define crates and their weighted rewards. Reward "weight" is relative: a
+# weight-50 reward is 10x as likely as a weight-5 one. %player% is replaced
+# with the opener's name in commands (run from console).
+
+crates:
+  vote:
+    display-name: "<aqua><bold>Vote Crate</bold>"
+    key-name: "<aqua>Vote Key"
+    key-material: TRIPWIRE_HOOK
+    rewards:
+      - name: "<white>16 Diamonds"
+        weight: 50
+        icon: DIAMOND
+        commands:
+          - "give %player% diamond 16"
+      - name: "<green>Diamond Block x4"
+        weight: 25
+        icon: DIAMOND_BLOCK
+        commands:
+          - "give %player% diamond_block 4"
+      - name: "<gold>Netherite Ingot"
+        weight: 10
+        icon: NETHERITE_INGOT
+        commands:
+          - "give %player% netherite_ingot 1"
+      - name: "<light_purple>God Apple"
+        weight: 4
+        icon: ENCHANTED_GOLDEN_APPLE
+        commands:
+          - "give %player% enchanted_golden_apple 1"
+
+# Crate blocks are bound in-game with /crate setblock <crate> - this section
+# is written automatically.
+blocks: {}

@@ -1,0 +1,17 @@
+name: CrateKeys
+version: '${project.version}'
+main: io.github.standardan.cratekeys.CrateKeysPlugin
+api-version: '1.21'
+description: Reward crates with keys and an animated roulette opening.
+author: Standardan
+
+commands:
+  crate:
+    description: Manage crates and give keys.
+    usage: /crate <givekey|setblock|removeblock|reload|list>
+    permission: cratekeys.admin
+
+permissions:
+  cratekeys.admin:
+    description: Manage crates and give keys.
+    default: op
